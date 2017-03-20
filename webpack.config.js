@@ -6,7 +6,19 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style-loader!css-loader" }
+            { test: /\.css$/, loader: "style-loader!css-loader" },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loaders: [
+                    'url?limit=10000&name=img/[hash:8].[name].[ext]', // 图片小于8k就转化为 base64, 或者单独作为文件
+                    'image-webpack' // 图片压缩
+                ]
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+              loaders: ['file?hash=sha512&digest=hex&name=[hash].[ext]']// 生成 md5 hash 格式的文件名'image-webpack' // 图片压缩
+            }
+
         ]
     }
 };
