@@ -1,4 +1,4 @@
-*.idea
+
 # Created by https://www.gitignore.io/api/node,ubuntu,Webstorm
 
 ### Node ###
@@ -119,5 +119,6 @@ fabric.properties
 # modules.xml
 # .idea/misc.xml
 # *.ipr
+*.idea
 
 # End of https://www.gitignore.io/api/node,ubuntu,Webstorm
