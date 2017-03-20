@@ -1,4 +1,12 @@
-// require("./style.css");
 
 require("./../css/style.css");
-document.write(require("./content.js"));
+import React, {Component} from 'react';
+import {render} from "react-dom";
+
+class HelloMessage extends React.Component {
+
+    render() {
+        return <div>Hello</div>;
+    }
+}
+render(<HelloMessage />, document.getElementById('app'));
